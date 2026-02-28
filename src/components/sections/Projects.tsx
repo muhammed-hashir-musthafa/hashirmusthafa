@@ -277,6 +277,23 @@ function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           </div>
 
+          {/* Key Features */}
+          {project?.features && project.features.length > 0 && (
+            <div>
+              <h4 className="text-sm font-mono text-foreground/40 mb-4">
+                KEY FEATURES
+              </h4>
+              <ul className="space-y-3">
+                {project.features.map((feature: string, i: number) => (
+                  <li key={i} className="flex items-start gap-3 text-foreground/80">
+                    <span className="inline-block w-2 h-2 rounded-full bg-amber-400 mt-2 shrink-0" />
+                    <span className="text-base md:text-lg">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {/* Actions */}
           {(project?.demo || project?.github) && (
             <div className="flex flex-wrap gap-4 pt-4">
