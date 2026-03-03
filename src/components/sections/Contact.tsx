@@ -7,6 +7,8 @@ import { Mail, MapPin, Send, ArrowUpRight, MessageSquare } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 import { Formik, Form, Field, FieldInputProps } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 // ─── Validation Schema ───────────────────────────────────────────────────────
 
@@ -18,9 +20,13 @@ const contactSchema = Yup.object().shape({
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),
-  message: Yup.string()
-    .max(500, "Message must be less than 500 characters")
- });
+  mobile: Yup.string()
+    .typeError("Invalid Number")
+    .matches(/^[0-9+\s-()]+$/, "Invalid mobile number")
+    .min(10, "Mobile number must be at least 10 digits")
+    .required("Mobile number is required"),
+  message: Yup.string().max(500, "Message must be less than 500 characters"),
+});
 
 // ─── Sub-components ──────────────────────────────────────────────────────────
 
@@ -222,13 +228,38 @@ export default function Contact() {
             <MagneticCard className="rounded-3xl">
               <div className="rounded-3xl border border-white/[0.07] bg-white/2 backdrop-blur-md p-8 md:p-12 relative overflow-hidden">
                 <Formik
-                  initialValues={{ name: "", email: "", message: "" }}
+                  initialValues={{
+                    name: "",
+                    email: "",
+                    mobile: "",
+                    message: "",
+                  }}
                   validationSchema={contactSchema}
                   onSubmit={async (values, { setSubmitting, resetForm }) => {
-                    await new Promise((r) => setTimeout(r, 800));
-                    window.location.href = `mailto:${portfolioData.email}?subject=Message from ${values.name}&body=${values.message}%0D%0A%0D%0AFrom: ${values.email}`;
-                    setSubmitting(false);
-                    resetForm();
+                    try {
+                      await axios.post(
+                        "https://formspree.io/f/mnjbenpl",
+                        {
+                          name: values.name,
+                          email: values.email,
+                          mobile: values.mobile,
+                          message: values.message,
+                        },
+                        {
+                          headers: {
+                            "Content-Type": "application/json",
+                          },
+                        },
+                      );
+
+                      toast.success("Message sent successfully!");
+                      resetForm();
+                    } catch (error) {
+                      console.error(error);
+                      toast.error("Something went wrong. Please try again.");
+                    } finally {
+                      setSubmitting(false);
+                    }
                   }}
                 >
                   {({ isSubmitting, isValid, errors, touched }) => (
@@ -260,6 +291,20 @@ export default function Contact() {
                           )}
                         </Field>
                       </div>
+
+                      <Field name="mobile">
+                        {({ field }: { field: FieldInputProps<string> }) => (
+                          <FloatingInput
+                            id="mobile"
+                            label="Mobile Number"
+                            type="text"
+                            placeholder="+1 234 567 8900"
+                            field={field}
+                            error={errors.mobile}
+                            touched={touched.mobile}
+                          />
+                        )}
+                      </Field>
 
                       <Field name="message">
                         {({ field }: { field: FieldInputProps<string> }) => (
