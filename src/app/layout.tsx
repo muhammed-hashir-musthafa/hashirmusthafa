@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Inter, Space_Grotesk, Poppins } from "next/font/google"
+import { Toaster } from "react-hot-toast"
 import "./globals.css"
 
 const inter = Inter({ 
@@ -39,6 +40,28 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.variable} ${spaceGrotesk.variable} ${poppins.variable} font-sans antialiased`} suppressHydrationWarning>
         {children}
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            style: {
+              background: "#1a1a1a",
+              color: "#fff",
+              border: "1px solid rgba(251, 191, 36, 0.2)",
+            },
+            success: {
+              iconTheme: {
+                primary: "#fbbf24",
+                secondary: "#1a1a1a",
+              },
+            },
+            error: {
+              iconTheme: {
+                primary: "#ef4444",
+                secondary: "#1a1a1a",
+              },
+            },
+          }}
+        />
       </body>
     </html>
   )
