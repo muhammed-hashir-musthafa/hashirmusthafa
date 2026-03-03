@@ -6,6 +6,7 @@ import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { portfolioData } from "@/data/portfolio";
 import Antigravity from "@/components/Antigravity";
+import Link from "next/link";
 
 export default function Hero() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -134,10 +135,10 @@ export default function Hero() {
             className="flex flex-wrap gap-4 justify-center"
           >
             <Button size="lg" asChild>
-              <a href="#projects">View Projects</a>
+              <Link href="#projects">View Projects</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <a href="#contact">Contact Me</a>
+              <Link href="#contact">Contact Me</Link>
             </Button>
           </motion.div>
         </motion.div>

@@ -75,17 +75,6 @@ export default function About() {
 
             <div className="flex gap-4 glass rounded-2xl p-8 justify-center">
               <motion.a
-                href={portfolioData.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, y: -5 }}
-                className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-white/5 transition-colors group"
-              >
-                <Github className="w-8 h-8 text-amber-400 group-hover:text-amber-300 transition-colors" />
-                <span className="text-sm text-foreground/60">GitHub</span>
-              </motion.a>
-
-              <motion.a
                 href={portfolioData.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -103,6 +92,16 @@ export default function About() {
               >
                 <Mail className="w-8 h-8 text-amber-400 group-hover:text-amber-300 transition-colors" />
                 <span className="text-sm text-foreground/60">Email</span>
+              </motion.a>
+              <motion.a
+                href={portfolioData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -5 }}
+                className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-white/5 transition-colors group"
+              >
+                <Github className="w-8 h-8 text-amber-400 group-hover:text-amber-300 transition-colors" />
+                <span className="text-sm text-foreground/60">GitHub</span>
               </motion.a>
             </div>
           </motion.div>
