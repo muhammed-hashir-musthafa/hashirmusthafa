@@ -64,16 +64,16 @@ export default function Navbar() {
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
         <div className="glass rounded-full px-6 py-3">
           <div className="flex items-center justify-between">
-            <div className="text-xl font-bold text-gradient">H</div>
+            <h3 className="text-base font-clash font-semibold mb-2 text-gradient tracking-wider">HASHIR</h3>
             <div className="hidden md:flex items-center gap-1">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   className="px-4 py-2 text-sm transition-colors hover:text-primary"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
             <div className="hidden md:block">
@@ -107,15 +107,15 @@ export default function Navbar() {
       <div className={`glass rounded-full px-6 py-3 ${scrolled ? "glow" : ""}`}>
         <div className="flex items-center justify-between">
           <motion.div
-            className="text-xl font-bold text-gradient"
+            className="text-lg font-clash font-semibold text-gradient tracking-wider"
             whileHover={{ scale: 1.05 }}
           >
-            H
+            HASHIR
           </motion.div>
 
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className={`relative px-4 py-2 text-sm transition-colors z-10 ${
@@ -136,7 +136,7 @@ export default function Navbar() {
                     transition={{ type: "spring", stiffness: 350, damping: 30 }}
                   />
                 )}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -171,7 +171,7 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
@@ -182,7 +182,7 @@ export default function Navbar() {
                   }`}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <Button className="w-full" asChild>
                 <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">

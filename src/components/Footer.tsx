@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { MessageCircle, Mail, Linkedin, Github } from "lucide-react"
 import { portfolioData } from "@/data/portfolio"
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="max-w-md"
           >
-            <h3 className="text-2xl font-bold mb-2 text-gradient">Hashir</h3>
+            <h3 className="text-2xl font-clash font-semibold mb-2 text-gradient tracking-wider">HASHIR</h3>
             <p className="text-foreground/60 text-sm">
               Passionate Software Developer crafting exceptional digital experiences with modern technologies and clean code.
             </p>
@@ -28,22 +29,22 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex gap-4"
           >
-            <a
-              href={`https://wa.me/${portfolioData.email.replace('@', '')}`}
+            <Link
+              href={`https://wa.me/+971561159716?text=Hello%20Hashir!%20I%20found%20your%20portfolio%20and%20would%20like%20to%20get%20in%20touch.`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 glass rounded-xl px-4 py-3 hover:bg-white/10 transition-all group"
             >
               <MessageCircle className="text-amber-400 group-hover:text-amber-300 transition-colors" size={20} />
               <span className="text-sm font-medium hover:text-amber-400">WhatsApp</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href={`mailto:${portfolioData.email}`}
               className="flex items-center gap-2 glass rounded-xl px-4 py-3 hover:bg-white/10 transition-all group"
             >
               <Mail className="text-amber-400 group-hover:text-amber-400 transition-colors" size={20} />
               <span className="text-sm font-medium hover:text-amber-400">{portfolioData.email}</span>
-            </a>
+            </Link>
           </motion.div>
         </div>
 
@@ -64,7 +65,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex items-center gap-6 text-sm"
           >
-            <a
+            <Link
               href={portfolioData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -72,8 +73,8 @@ export default function Footer() {
             >
               <Linkedin size={16} />
               LinkedIn
-            </a>
-            <a
+            </Link>
+            <Link
               href={portfolioData.github}
               target="_blank"
               rel="noopener noreferrer"
@@ -81,7 +82,7 @@ export default function Footer() {
             >
               <Github size={16} />
               GitHub
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>
