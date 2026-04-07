@@ -3,7 +3,8 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Mail, MapPin, Send, ArrowUpRight, MessageSquare } from "lucide-react";
+import { Mail, MapPin, Send, ArrowUpRight} from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { portfolioData } from "@/data/portfolio";
 import { Formik, Form, Field, FieldInputProps } from "formik";
 import * as Yup from "yup";
@@ -417,12 +418,12 @@ export default function Contact() {
                   className="w-11 h-11 rounded-xl bg-linear-to-br from-green-400/20 to-emerald-500/20 border border-green-400/20
                   flex items-center justify-center text-green-400 group-hover:scale-110 transition-transform"
                 >
-                  <MessageSquare size={18} />
+                      <FaWhatsapp size={18} />
                 </div>
                 <div>
                   <p className="text-white/40 text-xs mb-0.5">WhatsApp</p>
                   <p className="text-white text-sm font-medium">
-                    +971 50 123 4567
+                    +971 56 115 9716
                   </p>
                 </div>
               </div>
