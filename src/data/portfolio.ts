@@ -75,6 +75,33 @@ export const portfolioData = {
 
   projects: [
     {
+      title: "Enterprise ERP Platform -  DijllahX",
+      description:
+        "Full Stack ERP System for Precious Metals Trading & Financial Operations",
+      image: "/ijara-hub.png",
+      tech: [
+        "Next.js",
+        "React.js",
+        "TypeScript",
+        "MongoDB",
+        "Tailwind",
+        "Shadcn UI",
+        "CI/CD",
+        "Docker",
+        "React Query",
+        "JWT",
+      ],
+      // github: "https://github.com/muhammed-hashir-musthafa/ijara-hub",
+      // demo: "https://ijara-hub.vercel.app",
+      featured: true,
+      features: [
+        "Comprehensive accounting modules including Balance Sheet, P&L, Ledger, Journal, and Trial Balance",
+        "Trade position management, reconciliation, and financial reporting",
+        "Enterprise-grade authentication with JWT and role-based access control",
+        "REST API integrations with dynamic PDF/Excel export and reporting",
+      ],
+    },
+    {
       title: "Ijara Hub - Property & Vehicle Rental Management System",
       description:
         "A full-stack rental marketplace for property and vehicle rentals in the UAE, connecting owners and renters through a secure and scalable platform",
