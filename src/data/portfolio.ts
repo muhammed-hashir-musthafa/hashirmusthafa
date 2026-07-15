@@ -8,38 +8,50 @@ export const portfolioData = {
   github: "https://github.com/muhammed-hashir-musthafa",
 
   skills: [
-    { name: "HTML", level: 100, category: "Frontend"},
-    { name: "CSS", level: 100, category: "Frontend"},
-    { name: "JavaScript", level: 100, category: "Frontend"},
-    { name: "React.js", level: 100, category: "Frontend"},
-    { name: "Next.js", level: 100, category: "Frontend"},
-    { name: "TypeScript", level: 100, category: "Frontend"},
-    { name: "Tailwind CSS", level: 100, category: "Frontend"},
-    { name: "Material UI", level: 100, category: "Frontend"},
-    { name: "ShadCN", level: 100, category: "Frontend"},
-    { name: "Node.js", level: 100, category: "Backend"},
-    { name: "Express.js", level: 100, category: "Backend"},
-    { name: "Python", level: 100, category: "Backend"},
+    { name: "HTML", level: 100, category: "Frontend" },
+    { name: "CSS", level: 100, category: "Frontend" },
+    { name: "JavaScript", level: 100, category: "Frontend" },
+    { name: "React.js", level: 100, category: "Frontend" },
+    { name: "Next.js", level: 100, category: "Frontend" },
+    { name: "TypeScript", level: 100, category: "Frontend" },
+    { name: "Tailwind CSS", level: 100, category: "Frontend" },
+    { name: "Material UI", level: 100, category: "Frontend" },
+    { name: "ShadCN", level: 100, category: "Frontend" },
+    { name: "Node.js", level: 100, category: "Backend" },
+    { name: "Express.js", level: 100, category: "Backend" },
+    { name: "Python", level: 100, category: "Backend" },
     { name: "C#", level: 100, category: "Backend" },
-    { name: ".NET", level: 100, category: "Backend"},
-    { name: "WebSockets", level: 100, category: "Backend"},
-    { name: "PostgreSQL", level: 100, category: "Database"},
-    { name: "MySQL", level: 100, category: "Database"},
-    { name: "MongoDB", level: 100, category: "Database"},
-    { name: "Redis", level: 100, category: "Database"},
-    { name: "Docker", level: 100, category: "DevOps & Tools"},
-    { name: "AWS", level: 100, category: "DevOps & Tools"},
-    { name: "GitHub", level: 100, category: "DevOps & Tools"},
-    { name: "Postman", level: 100, category: "DevOps & Tools"},
-    { name: "Jest", level: 100, category: "DevOps & Tools"},
-    { name: "CI/CD", level: 100, category: "DevOps & Tools"},
+    { name: ".NET", level: 100, category: "Backend" },
+    { name: "WebSockets", level: 100, category: "Backend" },
+    { name: "PostgreSQL", level: 100, category: "Database" },
+    { name: "MySQL", level: 100, category: "Database" },
+    { name: "MongoDB", level: 100, category: "Database" },
+    { name: "Redis", level: 100, category: "Database" },
+    { name: "Docker", level: 100, category: "DevOps & Tools" },
+    { name: "AWS", level: 100, category: "DevOps & Tools" },
+    { name: "GitHub", level: 100, category: "DevOps & Tools" },
+    { name: "Postman", level: 100, category: "DevOps & Tools" },
+    { name: "Jest", level: 100, category: "DevOps & Tools" },
+    { name: "CI/CD", level: 100, category: "DevOps & Tools" },
   ],
 
   experience: [
     {
+      company: "Memas Commodities DMCC",
+      role: "Software Developer",
+      duration: "March 2026 - Present",
+      description:
+        "Developing an enterprise dashboard platform that unifies data from multiple ERP systems.",
+      achievements: [
+        "Integrated multiple ERP data sources into a centralized dashboard for management reporting.",
+        "Built scalable backend APIs and responsive frontend interfaces for real-time business insights.",
+        "Optimized application performance and implemented a scalable architecture for future business growth.",
+      ],
+    },
+    {
       company: "Lampros Virtual Build Mart Pvt. Ltd.",
       role: "Full Stack Developer",
-      duration: "Feb 2025 - Present",
+      duration: "Feb 2025 - Aug 2025",
       description:
         "Leading development of enterprise SaaS platform serving 10K+ users",
       achievements: [
@@ -67,7 +79,19 @@ export const portfolioData = {
       description:
         "A full-stack rental marketplace for property and vehicle rentals in the UAE, connecting owners and renters through a secure and scalable platform",
       image: "/ijara-hub.png",
-      tech: ["Next.js", "TypeScript", "Express.js", "MongoDB", "Socket.io", "AWS (EC2, S3)", "Docker", "GitHub Actions", "JWT", "OAuth 2.0", "AI Chatbot"],
+      tech: [
+        "Next.js",
+        "TypeScript",
+        "Express.js",
+        "MongoDB",
+        "Socket.io",
+        "AWS (EC2, S3)",
+        "Docker",
+        "GitHub Actions",
+        "JWT",
+        "OAuth 2.0",
+        "AI Chatbot",
+      ],
       github: "https://github.com/muhammed-hashir-musthafa/ijara-hub",
       demo: "https://ijara-hub.vercel.app",
       featured: true,
@@ -144,9 +168,19 @@ export const portfolioData = {
     },
     {
       title: "Cure Track - Health Care Management System",
-      description: "SaaS tool for managing healthcare operations and patient records",
+      description:
+        "SaaS tool for managing healthcare operations and patient records",
       image: "/cure-track.png",
-      tech: ["Next.js", "React Query", "Zustand", "Tailwind CSS", "TypeScript", "Express.js", "MongoDB", "Razorpay"],
+      tech: [
+        "Next.js",
+        "React Query",
+        "Zustand",
+        "Tailwind CSS",
+        "TypeScript",
+        "Express.js",
+        "MongoDB",
+        "Razorpay",
+      ],
       github: "https://github.com/muhammed-hashir-musthafa/CureTrack-Client",
       // demo: "https://portfoliogen.vercel.app",
       featured: false,
@@ -173,8 +207,7 @@ export const portfolioData = {
     },
     {
       title: "Application Development",
-      description:
-        "Full-stack web applications with robust backend systems",
+      description: "Full-stack web applications with robust backend systems",
       icon: "Code",
       features: [
         "Custom Web Applications",
@@ -184,8 +217,7 @@ export const portfolioData = {
     },
     {
       title: "Software Development",
-      description:
-        "Custom software solutions tailored to your business needs",
+      description: "Custom software solutions tailored to your business needs",
       icon: "Laptop",
       features: [
         "ERP Systems",
@@ -196,8 +228,7 @@ export const portfolioData = {
     },
     {
       title: "E-Commerce Solutions",
-      description:
-        "Complete online store development with payment integration",
+      description: "Complete online store development with payment integration",
       icon: "ShoppingCart",
       features: [
         "Online Store Development",
